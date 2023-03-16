@@ -1,0 +1,166 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*colors*/
+  --color-title: hsla(0, 0%, 0%, 1);
+  --color-text: hsla(0, 0%, 46%, 1);
+  --color-efect-image: hsla(var(--color-site), 65%, 88%, 1);
+  --body-color: hsla(0, 0%, 98%, 1);
+  --default1: hsla(var(--color-site), 36%, 57%, 1);
+  --hover-button: hsl(var(--color-site), 55%, 68%);
+  --color-site: 255;
+  --header-height: 4.5rem;
+}
+
+/*======== BASE =========*/
+
+body {
+  font: 400 1rem "DM Sans", sans-serif;
+  color: var(--color-text);
+  background-color: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font: 700 1.875rem "Poppins", sans-serif;
+  color: var(--color-title);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--default1);
+  color: var(--body-color);
+  font: 500 1rem "DM Sans", sans-serif;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: var(--hover-button);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--color-site), 36%, 57%, 0.34) 0%,
+    hsla(var(--color-site), 65%, 88%, 0.25)
+  );
+}
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--body-color);
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.logo {
+  font: 700 1.312rem "Poppins", sans-serif;
+  color: var(--color-title);
+}
+
+.logo span {
+  color: var(--default1);
+}
+
+nav {
+  align-items: center;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+
+main {
+  margin-top: var(--header-height);
+}
+
+/*==== HOME =====*/
+#home {
+    overflow: hidden;
+}
+
+#home .container {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/*====== LAYOUT ========*/
+#home .image img {
+  position: relative;
+  right: 2.937rem;
+}
+
+#home .image {
+  position: relative;
+}
+
+/*Cria um elemento ficticio verde*/
+#home .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-efect-image);
+  position: absolute;
+  z-index: 0;
+  left: 16.6%;
+  top: -16.8%;
+}
+
+#home .image,
+#home .image::before {
+  border-radius: 0.25rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
