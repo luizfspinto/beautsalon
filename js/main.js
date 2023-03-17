@@ -17,3 +17,16 @@ for(const link of links) {
     nav.classList.remove('show')
   })
 }
+
+//Ao fazer o scroll da página vai aplicar uma sombra no header
+const header = window.document.querySelector('#header')
+const navHeight = header.offsetHeight;
+
+window.addEventListener('scroll', function(){
+  if(window.scrollY >= navHeight) {
+    header.classList.add('scroll')
+  } else {
+    //Menor que a altura do header
+    header.classList.remove("scroll")
+  }
+})

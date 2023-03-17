@@ -19,6 +19,9 @@
 }
 
 /*======== BASE =========*/
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font: 400 1rem "DM Sans", sans-serif;
@@ -53,12 +56,21 @@ a {
   text-decoration: none;
 }
 
-.divider {
+.divider1 {
   height: 1px;
   background: linear-gradient(
     270deg,
     hsla(var(--color-site), 36%, 57%, 0.34) 0%,
     hsla(var(--color-site), 65%, 88%, 0.25)
+  );
+}
+
+.divider2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--color-site), 65%, 88%, 0.25),
+    hsla(var(--color-site), 36%, 57%, 0.34)
   );
 }
 
@@ -73,6 +85,20 @@ a {
   top: 0;
   left: 0;
   display: flex;
+}
+
+#header.scroll {
+  background-color: var(--default1);
+  transition: 0.3s;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.089);
+}
+
+#header.scroll .logo span {
+  color: white;
+}
+
+#header.scroll .icon-menu {
+  color: white;
 }
 
 /*======== Logo =======*/
@@ -127,9 +153,19 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.4s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /*==== MOSTRAR MENU =====*/
+nav.show .menu ul {
+  display: grid;
+}
+
 nav.show .menu {
   opacity: 1;
   visibility: visible;
@@ -139,31 +175,31 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-nav.show .menu {
   display: grid;
   place-content: center;
 }
+
 
 /*Touggle menu*/
 .toggle {
   color: var(--default1);
   font-size: 1.5rem;
   cursor: pointer;
-} 
+}
 
 nav .icon-close {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   right: 1.5rem;
-  /*TRANSITION*/
+  transition: 0.2s;
+  top: -1.5rem;
 }
 
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 ul {
@@ -182,6 +218,18 @@ main {
 
 .section {
   padding: 5rem 0;
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--default1);
+}
+
+.section .title {
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -248,4 +296,81 @@ img {
 #home .text p {
   margin-bottom: 2rem;
   max-width: 100%;
+}
+
+/*==== ABOUT =====*/
+#about {
+  background-color: white;
+}
+
+#about {
+  overflow: hidden;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .image {
+  position: relative;
+}
+
+/*Cria um elemento atras da imagem verde*/
+#about .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-efect-image);
+  position: absolute;
+  z-index: 0;
+  left: -33%;
+  top: -8.3%;
+}
+
+#about .image,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#about .text h1 {
+  margin-bottom: 1rem;
+}
+
+#about .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+/*====== SERVICES ======*/
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--default1);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--default1);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
