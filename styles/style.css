@@ -151,7 +151,7 @@ nav.show .menu {
   color: var(--default1);
   font-size: 1.5rem;
   cursor: pointer;
-}
+} 
 
 nav .icon-close {
   visibility: hidden;
