@@ -125,6 +125,10 @@ a {
   color: var(--default1);
 }
 
+.logo.alt span {
+  color: var(--body-color);
+}
+
 /*====== Navegation ======*/
 nav {
   align-items: center;
@@ -458,4 +462,57 @@ img {
 
 #contact ul li i {
   color: var(--default1);
+}
+
+/*====== FOOTER =====*/
+#footer {
+  background-color: var(--default1);
+}
+
+#footer .logo.alt{
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 1.312rem;
+}
+
+#footer .brand p{
+  color: var(--body-color);
+  margin-bottom: 0.75rem;
+}
+
+#footer .social i {
+  color: var(--body-color);
+  font-size: 1.3rem;
+}
+
+#footer .social a{
+  margin-right: 2rem;
+  transition: 0.4s;
+  display: inline-block;
+}
+
+#footer .social a:hover {
+  transform: translateY(-7px);
+}
+
+/*====== ICON BACK TO TOP ========*/
+.back-to-top {
+  background-color: var(--default1);
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.5rem;
+  clip-path: circle();
+  color: var(--body-color);
+  font-size: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }

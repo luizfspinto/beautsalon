@@ -17,15 +17,29 @@ for (const link of links) {
   })
 }
 
-//Ao fazer o scroll da página vai aplicar uma sombra no header
-const header = window.document.querySelector("#header")
-const navHeight = header.offsetHeight
-
-window.addEventListener("scroll", function () {
+/*====== SCROLL ======= */
+function moveScrollHeader() {
+  const header = window.document.querySelector("#header")
+  const navHeight = header.offsetHeight
   if (window.scrollY >= navHeight) {
     header.classList.add("scroll")
   } else {
     //Menor que a altura do header
     header.classList.remove("scroll")
   }
+}
+
+function moveBackToTop() {
+  const backToTopButton = window.document.querySelector('.back-to-top')
+  if(window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+/*invocation functions*/
+window.addEventListener("scroll", function () {
+  moveScrollHeader()
+   moveBackToTop()
 })
