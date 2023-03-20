@@ -1,0 +1,157 @@
+
+@media(min-width: 1200px) {
+  :root {
+  /*colors*/
+  --color-title: hsla(0, 0%, 0%, 1);
+  --color-text: hsla(0, 0%, 46%, 1);
+  --color-efect-image: hsla(var(--color-site), 65%, 88%, 1);
+  --body-color: hsla(0, 0%, 98%, 1);
+  --default1: hsla(var(--color-site), 36%, 57%, 1);
+  --hover-button: hsl(var(--color-site), 55%, 68%);
+  --color-site: 255;
+  --header-height: 4.5rem;
+  --font-size-title: 2.25rem;
+  --font-size-subtitle: 1rem;
+}
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  main {
+    margin-top: var(--header-height);
+  }
+
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+  }
+
+  nav .menu ul li a {
+    font: 400 var(--font-size-title);
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin: auto;
+  }
+
+  #home .text, .image
+ {
+  width: 50%;
+ }
+
+ #home .container {
+  display: flex;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  margin: auto;
+ }
+
+ #home .text {
+  order: 0;
+  max-width: 24rem;
+  text-align: left;
+  margin-left: -3rem;
+ }
+
+ #home .image {
+  order: 1;
+ }
+
+ #about .text, .image
+ {
+  width: 50%;
+ }
+
+#about .container {
+  display: flex;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  align-items: center;
+  max-width: 1120px;
+}
+
+ #about .text {
+  order: 0;
+  margin-left: 2.6rem;
+ }
+
+ #about .image {
+  order: 0;
+ }
+
+#services .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  align-items: center;
+  max-width: 1120px;
+}
+.section header  {
+  text-align: center;
+} 
+
+p.subtitle {
+  max-width: 30rem;
+}
+
+.cards {
+  display: flex;
+}
+
+ #services .text {
+  order: 0;
+  text-align: center;
+  align-items: center;
+ }
+
+ #services .image {
+  order: 1;
+ }
+
+ .testimonials {
+  display: flex;
+ }
+
+ #contact .container {
+  display: flex;
+ }
+
+ #contact .text, .links {
+  width: 50%;
+ }
+
+ #contact .container {
+  display: flex;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  margin: auto;
+}
+
+#contact .links {
+  margin-left: 16.75rem;
+ }
+
+ #footer .container {
+  display: flex;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  max-width: 1120px;
+}
+}
