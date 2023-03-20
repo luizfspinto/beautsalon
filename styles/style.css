@@ -1,11 +1,11 @@
-/*reset*/
+/*configurações padrão*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*====== Variables =======*/
+/*====== variaveis =======*/
 :root {
   /*colors*/
   --color-title: hsla(0, 0%, 0%, 1);
@@ -14,13 +14,13 @@
   --body-color: hsla(0, 0%, 98%, 1);
   --default1: hsla(var(--color-site), 36%, 57%, 1);
   --hover-button: hsl(var(--color-site), 55%, 68%);
-  --color-site: 232;
+  --color-site: 149;
   --header-height: 4.5rem;
   --font-size-title: 1.875rem;
   --font-size-subtitle: 1rem;
 }
 
-/*======== BASE =========*/
+/*======== base =========*/
 html {
   scroll-behavior: smooth;
 }
@@ -81,7 +81,7 @@ a {
   );
 }
 
-/*====== Header ========*/
+/*====== cabeçalho ========*/
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -95,24 +95,10 @@ a {
 }
 
 #header.scroll {
-  /*
-  background-color: var(--default1);
-  transition: 0.3s;
-  */
   box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.089);
 }
 
-/*
-#header.scroll .logo span {
-  color: white;
-}
-
-#header.scroll .icon-menu {
-  color: white;
-}
-*/
-
-/*======== Logo =======*/
+/*======== logotipo =======*/
 .logo {
   font: 700 1.312rem "Poppins", sans-serif;
   color: var(--color-title);
@@ -126,7 +112,7 @@ a {
   color: var(--body-color);
 }
 
-/*====== Navegation ======*/
+/*====== menu de navegação ======*/
 nav {
   align-items: center;
   height: var(--header-height);
@@ -139,7 +125,7 @@ nav ul li {
   text-align: center;
 }
 
-/*===== Efect Hover color*/
+/*===== Efeito de passar o mouse ======*/
 nav ul li a {
   transition: color 0.2s;
   position: relative;
@@ -148,7 +134,7 @@ nav ul li a:hover {
   color: var(--default1);
 }
 
-/*Efect hover diviser*/
+/*===== Efeito de passar o mouse e criar linha abaixo do menu =====*/
 nav ul li a::after {
   content: "";
   width: 0%;
@@ -160,11 +146,12 @@ nav ul li a::after {
   transition: 0.3s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 
-/*===== Menu oculto =======*/
+/*===== ocultar menu =======*/
 nav .menu {
   opacity: 0;
   visibility: hidden;
@@ -176,7 +163,7 @@ nav .menu ul {
   display: none;
 }
 
-/*==== MOSTRAR MENU =====*/
+/*==== mostrar o menu =====*/
 nav.show .menu ul {
   display: grid;
 }
@@ -224,7 +211,7 @@ nav ul.grid {
   gap: 3rem;
 }
 
-/*======= Container =========*/
+/*======= seções e container =========*/
 .section {
   padding: calc(5rem + var(--header-height)) 0 4rem;
 }
@@ -251,7 +238,7 @@ img {
   height: auto;
 }
 
-/*==== HOME =====*/
+/*==== seção home =====*/
 #home {
   overflow: hidden;
 }
@@ -275,7 +262,7 @@ img {
   position: relative;
 }
 
-/*Cria um elemento atras da imagem verde*/
+/*cria o elemento atrás da imagem de cor verde*/
 #home .image::before {
   content: "";
   height: 100%;
@@ -307,7 +294,7 @@ img {
   max-width: 100%;
 }
 
-/*==== ABOUT =====*/
+/*==== seção sobre =====*/
 #about {
   background-color: white;
 }
@@ -328,7 +315,7 @@ img {
   position: relative;
 }
 
-/*Cria um elemento atras da imagem verde*/
+/*cria o elemento atrás da imagem de cor verde*/
 #about .image::before {
   content: "";
   height: 100%;
@@ -359,7 +346,7 @@ img {
   max-width: 100%;
 }
 
-/*====== SERVICES ======*/
+/*====== seção de serviços ======*/
 .cards.grid {
   gap: 1.5rem;
 }
@@ -384,7 +371,7 @@ img {
   margin-bottom: 0.75rem;
 }
 
-/*======= TESTIMONIALS======*/
+/*======= seção de testemunhos ======*/
 #testimonials {
   background-color: white;
 }
@@ -428,7 +415,7 @@ img {
   margin-bottom: 0;
 }
 
-/*====== CONTACT ========*/
+/*====== seção de contato ========*/
 #contact .grid {
   gap: 4rem;
 }
@@ -456,7 +443,7 @@ img {
   color: var(--default1);
 }
 
-/*====== FOOTER =====*/
+/*====== seção rodapé =====*/
 #footer.section {
   background-color: var(--default1);
   padding: 3rem 0;
@@ -488,7 +475,7 @@ img {
   transform: translateY(-7px);
 }
 
-/*====== ICON BACK TO TOP ========*/
+/*====== botão para rola a página ao topo ========*/
 .back-to-top {
   background-color: var(--default1);
   position: fixed;

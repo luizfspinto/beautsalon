@@ -1,18 +1,17 @@
-
-@media(min-width: 1200px) {
+/*configurações com tela maior que 1200px*/
+@media (min-width: 1200px) {
   :root {
-  /*colors*/
-  --color-title: hsla(0, 0%, 0%, 1);
-  --color-text: hsla(0, 0%, 46%, 1);
-  --color-efect-image: hsla(var(--color-site), 65%, 88%, 1);
-  --body-color: hsla(0, 0%, 98%, 1);
-  --default1: hsla(var(--color-site), 36%, 57%, 1);
-  --hover-button: hsl(var(--color-site), 55%, 68%);
-  --color-site: 255;
-  --header-height: 4.5rem;
-  --font-size-title: 2.25rem;
-  --font-size-subtitle: 1rem;
-}
+    /*colors*/
+    --color-title: hsla(0, 0%, 0%, 1);
+    --color-text: hsla(0, 0%, 46%, 1);
+    --color-efect-image: hsla(var(--color-site), 65%, 88%, 1);
+    --body-color: hsla(0, 0%, 98%, 1);
+    --default1: hsla(var(--color-site), 36%, 57%, 1);
+    --hover-button: hsl(var(--color-site), 55%, 68%);
+    --header-height: 4.5rem;
+    --font-size-title: 2.25rem;
+    --font-size-subtitle: 1rem;
+  }
 
   .section {
     padding: 10rem 0;
@@ -22,6 +21,7 @@
     margin-top: var(--header-height);
   }
 
+  /*menu de navegação*/
   nav .menu {
     visibility: visible;
     opacity: 1;
@@ -40,118 +40,122 @@
     display: none;
   }
 
+  /*largura do container*/
   .container {
     max-width: 1120px;
     margin: auto;
   }
 
-  #home .text, .image
- {
-  width: 50%;
- }
+  /*seção home*/
+  #home .text,
+  .image {
+    width: 50%;
+  }
 
- #home .container {
-  display: flex;
-  justify-content: space-around;
-  grid-auto-flow: column;
-  align-items: center;
-  max-width: 1120px;
-  margin: auto;
- }
+  #home .container {
+    display: flex;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    margin: auto;
+  }
 
- #home .text {
-  order: 0;
-  max-width: 24rem;
-  text-align: left;
-  margin-left: -3rem;
- }
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+    margin-left: -3rem;
+  }
 
- #home .image {
-  order: 1;
- }
+  #home .image {
+    order: 1;
+  }
 
- #about .text, .image
- {
-  width: 50%;
- }
+  /*seção sobre*/
+  #about .container {
+    display: flex;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    margin: auto;
+  }
 
-#about .container {
-  display: flex;
-  justify-content: space-around;
-  grid-auto-flow: column;
-  align-items: center;
-  max-width: 1120px;
-}
+  #about .text,
+  .image {
+    width: 45%;
+  }
 
- #about .text {
-  order: 0;
-  margin-left: 2.6rem;
- }
+  #about .image {
+    margin-left: 0.5rem;
+  }
 
- #about .image {
-  order: 0;
- }
+  /* seção serviços*/
+  #services .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    align-items: center;
+    max-width: 1120px;
+  }
+  .section header {
+    text-align: center;
+  }
 
-#services .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  grid-auto-flow: column;
-  align-items: center;
-  max-width: 1120px;
-}
-.section header  {
-  text-align: center;
-} 
+  p.subtitle {
+    max-width: 30rem;
+  }
 
-p.subtitle {
-  max-width: 30rem;
-}
+  .cards {
+    display: flex;
+  }
 
-.cards {
-  display: flex;
-}
+  #services .text {
+    order: 0;
+    text-align: center;
+    align-items: center;
+  }
 
- #services .text {
-  order: 0;
-  text-align: center;
-  align-items: center;
- }
+  #services .image {
+    order: 1;
+  }
 
- #services .image {
-  order: 1;
- }
+  /*seção testemunhos*/
+  .testimonials {
+    display: flex;
+  }
 
- .testimonials {
-  display: flex;
- }
+  /*seção contato*/
+  #contact .container {
+    display: flex;
+  }
 
- #contact .container {
-  display: flex;
- }
+  #contact .text,
+  .links {
+    width: 50%;
+  }
 
- #contact .text, .links {
-  width: 50%;
- }
+  #contact .container {
+    display: flex;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    margin: auto;
+  }
 
- #contact .container {
-  display: flex;
-  justify-content: space-around;
-  grid-auto-flow: column;
-  align-items: center;
-  max-width: 1120px;
-  margin: auto;
-}
+  #contact .links {
+    margin-left: 16.75rem;
+  }
 
-#contact .links {
-  margin-left: 16.75rem;
- }
-
- #footer .container {
-  display: flex;
-  justify-content: space-between;
-  grid-auto-flow: column;
-  align-items: center;
-  max-width: 1120px;
-}
+  /*seção rodapé*/
+  #footer .container {
+    display: flex;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    align-items: center;
+    max-width: 1120px;
+  }
 }
