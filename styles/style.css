@@ -14,7 +14,7 @@
   --body-color: hsla(0, 0%, 98%, 1);
   --default1: hsla(var(--color-site), 36%, 57%, 1);
   --hover-button: hsl(var(--color-site), 55%, 68%);
-  --color-site: 149;
+  --color-site: 255;
   --header-height: 4.5rem;
   --font-size-title: 1.875rem;
   --font-size-subtitle: 1rem;
