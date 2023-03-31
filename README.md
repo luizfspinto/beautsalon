@@ -10,7 +10,7 @@ Landing page de salão de beleza. Projeto desenvolvido no NWL da Rocktseat<br/>
 </p>
 
 ## Demo
-
+https://beautsalon.lzfelipe.dev/
 
 ## 🚀 Tecnologias
 
